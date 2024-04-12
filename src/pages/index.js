@@ -17,12 +17,20 @@ import { graphql } from "gatsby"
 
 
 const Header = styled.h3`
-  text-align: center;
-  margin-top: 8px;
-  color: ${colorGrayLight};
-  @media (max-width: 340px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+width: 80%;
+max-width: 450px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+transition: transform 0.3s ease; 
+
+&:hover {
+  transform: scale(1.1); 
+  /* Add any other hover effects you want */
+}
+
+@media (max-width: ${screenSizeS}) {
+  display: none;
   }
 `
 
@@ -38,16 +46,23 @@ const HorizontalLogo = styled.img`
 `
 
 const VerticalLogo = styled.img`
-  display: none;
-  @media (max-width: ${screenSizeS}) {
-    /* width: 200px; */
-    display: block;
-    margin: 2rem auto;
-  }
-  @media (max-width: 340px) {
-    width: 140px;
-    display: block;
-    margin: 2rem auto;
+display: none;
+@media (max-width: ${screenSizeS}) {
+  /* width: 200px; */
+  display: block;
+  margin: 2rem auto;
+  transition: transform 0.3s ease; 
+}
+@media (max-width: 340px) {
+  width: 140px;
+  display: block;
+  margin: 2rem auto;
+}
+
+&:hover {
+  transform: scale(1.1); 
+  
+}
   }
 `
 
